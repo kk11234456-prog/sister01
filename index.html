@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ขอโทษครับ ❤️</title>
+    <meta name="description" content="หน้าเว็บบอกรักแฟน สวย มินิมอล พร้อมเอฟเฟกต์หัวใจ เพลง และแกลเลอรีรูป" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Kanit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg1: #fb95f1;
+            --bg2: #fd6ec1;
+            --bg3: #fe98ec;
+            --bg4: #fd3cc6;
+            --bg5: #f9a0da;
+            --bg6: #ffa7fc;
+            --card: #ffffff;
+            --ink: #2a2a2a;
+            --accent: #000000;
+            --accent-2: #000000;
+            --muted: #777;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .15);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Kanit', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+            color: var(--ink);
+            overflow-x: hidden;
+            background: #ffe3ec;
+            background: linear-gradient(120deg, var(--bg1), var(--bg2), var(--bg3));
+            background-size: 300% 300%;
+            animation: bgflow 18s ease-in-out infinite;
+        }
+
+        @keyframes bgflow {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        .container {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 32px
+        }
+
+        .card {
+            width: min(900px, 92vw);
+            background: var(--card);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before,
+        .card::after {
+            content: "";
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: .25;
+            pointer-events: none
+        }
+
+        .card::before {
+            background: var(--bg6);
+            top: -120px;
+            left: -120px
+        }
+
+        .card::after {
+            background: var(--bg5);
+            bottom: -120px;
+            right: -120px
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .heart-logo {
+            width: 56px;
+            height: 56px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            background: radial-gradient(circle at 30% 30%, #fff, #ffd1dc 70%);
+            box-shadow: inset 0 6px 10px rgba(255, 255, 255, .6), inset 0 -8px 14px rgba(0, 0, 0, .06), 0 8px 24px rgba(255, 92, 138, .35);
+        }
+
+        .heart-logo svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        h1 {
+            font-family: 'Sriracha', cursive;
+            font-size: clamp(28px, 5vw, 44px);
+            margin: 0;
+            line-height: 1.1
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: clamp(14px, 2.4vw, 16px)
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px
+        }
+
+        button {
+            appearance: none;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform .05s ease, box-shadow .2s ease, filter .2s ease
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: white;
+            box-shadow: 0 10px 18px rgba(255, 92, 138, .35)
+        }
+
+        .btn-ghost {
+            background: #fff;
+            color: var(--ink);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .08)
+        }
+
+        button:active {
+            transform: translateY(1px)
+        }
+
+        .typewriter {
+            font-size: clamp(18px, 2.8vw, 22px);
+            margin-top: 14px;
+            min-height: 2.4em
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-top: 18px
+        }
+
+        .stat {
+            background: #fff;
+            border: 1px solid #f4c2d7;
+            border-radius: 18px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .05)
+        }
+
+        .stat b {
+            display: block;
+            font-size: clamp(22px, 4vw, 28px)
+        }
+
+        .stat span {
+            color: var(--muted)
+        }
+
+        .gallery {
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px
+        }
+
+        .gallery .pic {
+            position: relative;
+            background: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .06)
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block
+        }
+
+        .pic input {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer
+        }
+
+        .pic .hint {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(255, 255, 255, .8);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 12px
+        }
+
+        .footer {
+            text-align: center;
+            color: #555;
+            margin-top: 20px;
+            font-size: 14px
+        }
+
+
+        .float-heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            will-change: transform, opacity
+        }
+
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            place-items: center;
+            background: rgba(0, 0, 0, .4)
+        }
+
+        .modal.open {
+            display: grid
+        }
+
+        .modal-card {
+            width: min(680px, 92vw);
+            background: #fff;
+            border-radius: 22px;
+            padding: 24px;
+            box-shadow: var(--shadow)
+        }
+
+        .modal-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            font-family: 'Sriracha'
+        }
+
+        .modal-card p {
+            line-height: 1.7
+        }
+
+
+        canvas#confetti {
+            position: fixed;
+            inset: 0;
+            pointer-events: none
+        }
+
+        @media (max-width:720px) {
+            .gallery img {
+                height: 160px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="confetti"></canvas>
+    <div class="container">
+        <div class="card">
+            <header>
+                <div class="heart-logo" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path
+                            d="M12 21s-6.716-4.27-9.193-7.134C.875 11.705.5 8.77 2.343 6.929a5.5 5.5 0 0 1 7.778 0L12 8.808l1.879-1.879a5.5 5.5 0 1 1 7.778 7.778C18.716 16.73 12 21 12 21Z"
+                            fill="#ff5c8a" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 id="title"> ยอมแพ้ <span id="lover-name"> แล้วว่ะ </span>🖤</h1>
+                    <div class="subtitle">พี่อย่างพึ่ง....หายไปเลยน้าค้าบบ</div>
+                </div>
+            </header>
+
+            <div class="actions">
+                <button class="btn-primary" id="open-letter">เปิดจดหมาย</button>
+                <button class="btn-ghost" id="toggle-music" aria-pressed="false">▶️ เล่นเพลง</button>
+                <button class="btn-ghost" id="spawn-hearts">คิดถึงอะ ❤️</button>
+            </div>
+
+            <div class="typewriter" id="typewriter" aria-live="polite"></div>
+
+            <section class="stats" aria-label="สถิติความรัก">
+                <div class="stat"><b id="days">0</b><span>วันที่เริ่มรู้จักกัน</span></div>
+                <div class="stat"><b id="hours">0</b><span>ชั่วโมงที่รู้จักกัน</span></div>
+                <div class="stat"><b id="beats">0</b><span>วินาทีที่รู้จักกัน</span></div>
+            </section>
+
+            <section class="gallery" aria-label="แกลเลอรีความทรงจำ">
+                <div class="pic"><img id="img1"
+                        src="C:\Users\kk112\OneDrive\เดสก์ท็อป\งาน\web01\img\13d474247ca3b7950a6d175a1935609d.jpg"
+                        alt="ความทรงจำ 1"><span class="hint"></span><input type="file" accept="image/*"
+                        data-target="img1"></div>
+                <div class="pic"><img id="img2"
+                        src="C:\Users\kk112\OneDrive\เดสก์ท็อป\งาน\web01\img\214784289e6d651afb4afcd4faf7579c.jpg"
+                        alt="ความทรงจำ 2"><span class="hint"></span><input type="file" accept="image/*"
+                        data-target="img2"></div>
+                <div class="pic"><img id="img3"
+                        src="C:\Users\kk112\OneDrive\เดสก์ท็อป\งาน\web01\img\d36645b4cb27bb4662f4c44d31d21ee9.jpg"
+                        alt="ความทรงจำ 3"><span class="hint"></span><input type="file" accept="image/*"
+                        data-target="img3"></div>
+            </section>
+
+            <div class="footer">ผมตั้งใจทำเพื่อพี่เลยนะครับ</div>
+        </div>
+    </div>
+
+
+    <audio id="bgm"
+        src="C:\Users\kk112\OneDrive\เดสก์ท็อป\งาน\web01\img\d36645b4cb27bb4662f4c44d31d21ee9.jpg"
+        preload="auto" loop></audio>
+
+
+    <div class="modal" id="letter-modal" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+        <div class="modal-card">
+            <h3 id="letter-title">ถึงพี่นะครับ</h3>
+            <p id="letter-body"> คืนดีกันนะคร้าบบ....น้าาาา </p>
+            <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:8px">
+                <button class="btn-ghost" id="close-letter">ปิด</button>
+                <button class="btn-primary" id="confetti-btn">ลองกดสิ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const SETTINGS = {
+            LOVER_NAME: 'ผมขอโทษนะครับ',
+            START_DATE: '2025-08-31T00:00:00',
+            TYPEWRITER_LINES: [
+                'เพราะฉันนั้นกลัวจะติดเธอซะก่อน',
+                'ติดแบบไม่ได้นอน ทั้งคืน til the morn',
+                'กลางคืนต้องอยู่คนเดียวแล้วมันเหงา, ooh',
+                'Shawty, be my sweet baby '
+            ],
+            LETTER_TITLE: 'ถึงพี่สาวอะ',
+            LETTER_BODY: 'มาง้ออะ อย่านอยผมเลยนะ รักพี่นะ🤭'
+        };
+
+
+        document.getElementById('lover-name').textContent = SETTINGS.LOVER_NAME;
+        document.getElementById('title').innerHTML = `ถึงพี่สาวครับ <span id="lover-name">${SETTINGS.LOVER_NAME}</span> 😘`;
+        document.getElementById('letter-title').textContent = SETTINGS.LETTER_TITLE;
+        document.getElementById('letter-body').textContent = SETTINGS.LETTER_BODY;
+
+
+        const tw = document.getElementById('typewriter');
+        let line = 0, char = 0;
+        function typeLoop() {
+            const text = SETTINGS.TYPEWRITER_LINES[line % SETTINGS.TYPEWRITER_LINES.length];
+            char++;
+            tw.textContent = text.slice(0, char) + (char % 2 ? '|' : ' ');
+            if (char >= text.length) {
+                setTimeout(() => { line++; char = 0; }, 1600);
+            }
+        }
+        setInterval(typeLoop, 60);
+
+
+        function updateStats() {
+            const start = new Date(SETTINGS.START_DATE).getTime();
+            const now = Date.now();
+            const diff = Math.max(0, now - start);
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const beats = Math.floor(diff / 860);
+            document.getElementById('days').textContent = days.toLocaleString('th-TH');
+            document.getElementById('hours').textContent = hours.toLocaleString('th-TH');
+            document.getElementById('beats').textContent = beats.toLocaleString('th-TH');
+        }
+        updateStats(); setInterval(updateStats, 1000);
+
+
+        const bgm = document.getElementById('bgm');
+        const musicBtn = document.getElementById('toggle-music');
+        musicBtn.addEventListener('click', async () => {
+            if (bgm.paused) {
+                try { await bgm.play(); musicBtn.textContent = '⏸️ หยุดเพลง'; musicBtn.setAttribute('aria-pressed', 'true'); }
+                catch (e) { alert('เบราว์เซอร์บล็อกการเล่นอัตโนมัติ\nกรุณากดอีกครั้งหลังมีการโต้ตอบกลับ'); }
+            } else {
+                bgm.pause(); musicBtn.textContent = '▶️ เล่นเพลง'; musicBtn.setAttribute('aria-pressed', 'false');
+            }
+        });
+
+
+        const modal = document.getElementById('letter-modal');
+        document.getElementById('open-letter').onclick = () => modal.classList.add('open');
+        document.getElementById('close-letter').onclick = () => modal.classList.remove('open');
+        modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+
+        document.querySelectorAll('.pic input').forEach(input => {
+            input.addEventListener('change', e => {
+                const file = e.target.files[0]; if (!file) return;
+                const url = URL.createObjectURL(file);
+                const target = document.getElementById(e.target.dataset.target);
+                target.src = url; target.alt = 'ภาพต่างๆ';
+            });
+        });
+
+
+        function spawnHeart(x, y) {
+            const el = document.createElement('div');
+            el.className = 'float-heart';
+            el.innerHTML = `<svg width="28" height="28" viewBox="0 0 24 24" fill="${randomPink()}" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-6.716-4.27-9.193-7.134C.875 11.705.5 8.77 2.343 6.929a5.5 5.5 0 0 1 7.778 0L12 8.808l1.879-1.879a5.5 5.5 0 1 1 7.778 7.778C18.716 16.73 12 21 12 21Z"/></svg>`;
+            document.body.appendChild(el);
+            const startY = y + 10, endY = y - (120 + Math.random() * 80);
+            const drift = (Math.random() * 60 - 30);
+            const scale = .8 + Math.random() * 1.2;
+            el.style.transform = `translate(${x}px, ${startY}px) scale(${scale})`;
+            el.style.opacity = '1';
+            el.animate([
+                { transform: `translate(${x}px, ${startY}px) scale(${scale})`, opacity: 1 },
+                { transform: `translate(${x + drift}px, ${endY}px) scale(${scale + 0.2})`, opacity: 0 }
+            ], { duration: 1800 + Math.random() * 800, easing: 'ease-out' }).onfinish = () => el.remove();
+        }
+        function randomPink() {
+            const shades = ['#ff5c8a', '#ff8fab', '#ff7096', '#ff4d6d', '#ffb3c6'];
+            return shades[Math.floor(Math.random() * shades.length)];
+        }
+        document.getElementById('spawn-hearts').addEventListener('click', e => {
+            const { innerWidth: w, innerHeight: h } = window;
+            for (let i = 0; i < 24; i++)
+                spawnHeart(Math.random() * w, h - 20 - Math.random() * 80);
+        });
+        document.addEventListener('click', e => {
+            if (!e.target.closest('#spawn-hearts')) spawnHeart(e.clientX, e.clientY);
+        });
+
+
+        const canvas = document.getElementById('confetti');
+        const ctx = canvas.getContext('2d');
+        function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+        addEventListener('resize', resize); resize();
+        let confs = [];
+        function makeConfetti() {
+            const colors = ['#ff5c8a', '#ffd166', '#06d6a0', '#118ab2', '#ef476f'];
+            for (let i = 0; i < 200; i++) {
+                confs.push({
+                    x: Math.random() * canvas.width,
+                    y: -20 - Math.random() * canvas.height,
+                    s: 4 + Math.random() * 6,
+                    r: Math.random() * Math.PI,
+                    v: 1 + Math.random() * 3,
+                    c: colors[(Math.random() * colors.length) | 0]
+                });
+            }
+        }
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            confs.forEach(p => {
+                p.y += p.v; p.r += 0.03;
+                ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r);
+                ctx.fillStyle = p.c; ctx.fillRect(-p.s / 2, -p.s / 2, p.s, p.s);
+                ctx.restore();
+            });
+            confs = confs.filter(p => p.y < canvas.height + 20);
+            requestAnimationFrame(draw);
+        }
+        draw();
+        document.getElementById('confetti-btn').addEventListener('click', () => { makeConfetti(); spawnCelebrationHearts(); });
+        function spawnCelebrationHearts() {
+            const { innerWidth: w, innerHeight: h } = window;
+            for (let i = 0; i < 40; i++) spawnHeart(Math.random() * w, h / 2 + Math.random() * h / 2);
+        }
+    </script>
+</body>
+
+</html>
